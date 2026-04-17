@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44034987253e324284ed6c38a7cc242, type: 3}
+  m_Name: LevelData 6
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelIndex: 6
+  islandIndex: 1
+  mapPrefab: {fileID: 0}
+  questionData:
+    questionText: "\u0645\u0646 \u0647\u0648 \u0627\u0644\u0639\u0627\u0644\u0645
+      \u0627\u0644\u0630\u064A \u062F\u0639\u0645 \u0642\u064A\u0627\u0645 \u0627\u0644\u062F\u0648\u0644\u0629
+      \u0627\u0644\u0633\u0639\u0648\u062F\u064A\u0629 \u0627\u0644\u0623\u0648\u0644\u0649\u061F"
+    options:
+    - "\u0627\u0644\u0625\u0645\u0627\u0645 \u0627\u0644\u0634\u0627\u0641\u0639\u064A"
+    - "\u0627\u0644\u0634\u064A\u062E \u0645\u062D\u0645\u062F \u0628\u0646 \u0639\u0628\u062F
+      \u0627\u0644\u0648\u0647\u0627\u0628"
+    - "\u0627\u0644\u0645\u0644\u0643 \u0639\u0628\u062F \u0627\u0644\u0639\u0632\u064A\u0632
+      \u0622\u0644 \u0633\u0639\u0648\u062F"
+    - "\u0627\u0644\u0625\u0645\u0627\u0645 \u062A\u0631\u0643\u064A \u0628\u0646
+      \u0639\u0628\u062F \u0627\u0644\u0644\u0647"
+    correctAnswerIndex: 1
+    hintText: "\u0646\u0641\u0633 \u0627\u0644\u0634\u062E\u0635 \u0627\u0644\u0644\u064A
+      \u062A\u062D\u0627\u0644\u0641 \u0645\u0639 \u0627\u0644\u0625\u0645\u0627\u0645
+      \u0645\u062D\u0645\u062F \u0628\u0646 \u0633\u0639\u0648\u062F"
+    hintCost: 10
