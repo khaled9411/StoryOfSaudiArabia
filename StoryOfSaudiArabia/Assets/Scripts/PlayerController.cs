@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     private float horizontalInput = 0f;
+    private float uiInput = 0f;
     private bool isGrounded;
     private int jumpsRemaining;
     private bool isDead = false;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead) return;
 
+        HandleInput();
         CheckStatus();
         UpdateAnimations();
         FlipSprite();
@@ -45,6 +47,25 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead) return;
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+    }
+
+    private void HandleInput()
+    {
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+        {
+            Jump();
+        }
+
+        float keyboardInput = Input.GetAxisRaw("Horizontal");
+
+        if (keyboardInput != 0)
+        {
+            horizontalInput = keyboardInput;
+        }
+        else
+        {
+            horizontalInput = uiInput;
+        }
     }
 
     private void CheckStatus()
@@ -74,9 +95,9 @@ public class PlayerController : MonoBehaviour
 
     #region Mobile UI Input Methods
 
-    public void MoveRightDown() { if (!isDead) horizontalInput = 1f; }
-    public void MoveLeftDown() { if (!isDead) horizontalInput = -1f; }
-    public void StopMoving() { if (!isDead) horizontalInput = 0f; }
+    public void MoveRightDown() { if (!isDead) uiInput = 1f; }
+    public void MoveLeftDown() { if (!isDead) uiInput = -1f; }
+    public void StopMoving() { if (!isDead) uiInput = 0f; }
 
     public void Jump()
     {
@@ -98,6 +119,7 @@ public class PlayerController : MonoBehaviour
         if (isDead) return;
         isDead = true;
         horizontalInput = 0f;
+        uiInput = 0f;
         rb.linearVelocity = Vector2.zero;
         animator.SetBool(dieHash, true);
     }
