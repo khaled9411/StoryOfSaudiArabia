@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7659687315446967829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4690459886874641363}
+  - component: {fileID: 3538902775670829095}
+  - component: {fileID: 2980611989121801896}
+  m_Layer: 0
+  m_Name: FinalLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4690459886874641363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659687315446967829}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 104.2, y: 8.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &3538902775670829095
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659687315446967829}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.75586104, y: 10.021276}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.511722, y: 23.507824}
+  m_EdgeRadius: 0
+--- !u!114 &2980611989121801896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659687315446967829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce4f143ca6da5e4bb4f356d54652a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishLine
+  questionData:
+    questionText: "\u0645\u0646 \u0647\u0648 \u0645\u0624\u0633\u0633 \u0627\u0644\u062F\u0648\u0644\u0629
+      \u0627\u0644\u0633\u0639\u0648\u062F\u064A\u0629 \u0627\u0644\u0623\u0648\u0644\u0649\u061F"
+    options:
+    - "\u0627\u0644\u0645\u0644\u0643 \u0639\u0628\u062F \u0627\u0644\u0639\u0632\u064A\u0632
+      \u0622\u0644 \u0633\u0639\u0648\u062F"
+    - "\u0645\u062D\u0645\u062F \u0639\u0644\u064A \u0628\u0627\u0634\u0627"
+    - "\u0627\u0644\u0625\u0645\u0627\u0645 \u0645\u062D\u0645\u062F \u0628\u0646
+      \u0633\u0639\u0648\u062F"
+    - "\u0627\u0644\u0645\u0644\u0643 \u0641\u064A\u0635\u0644 \u0628\u0646 \u0639\u0628\u062F
+      \u0627\u0644\u0639\u0632\u064A\u0632"
+    correctAnswerIndex: 2
+    hintText: " \u0627\u0633\u0645\u0647 \u064A\u0628\u062F\u0623 \u0628\u0640 \u201C\u0645\u062D\u0645\u062F\u201D
+      \u0648\u0647\u0648 \u0645\u0646 \u0623\u0633\u0631\u0629 \u062D\u0643\u0645\u062A
+      \u0627\u0644\u062F\u0631\u0639\u064A\u0629"
+    hintCost: 1
