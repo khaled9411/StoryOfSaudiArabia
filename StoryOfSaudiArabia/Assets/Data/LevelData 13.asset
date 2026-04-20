@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   levelIndex: 13
   islandIndex: 2
-  mapPrefab: {fileID: 0}
+  mapPrefab: {fileID: 1164223384279159415, guid: 498a6623207152e4fb9c4cf341ab1063, type: 3}
   questionData:
     questionText: 
     options:
