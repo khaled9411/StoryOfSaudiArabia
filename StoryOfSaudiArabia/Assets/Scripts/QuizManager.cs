@@ -17,6 +17,7 @@ public class QuestionData
     public int hintCost = 10;
 }
 
+[RequireComponent(typeof(AudioSource))]
 public class QuizManager : MonoBehaviour
 {
     [Header("UI References")]
@@ -39,11 +40,21 @@ public class QuizManager : MonoBehaviour
     [SerializeField] private Color wrongColor = Color.red;
     [SerializeField] private float animationDuration = 0.5f;
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip winSound;
+    [SerializeField] private AudioClip loseSound;
+    private AudioSource audioSource;
+
     public static event Action OnQuizPassed;
     public static event Action OnQuizFailed;
 
     private QuestionData currentQuestion;
     private bool isInputLocked = false;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
@@ -124,6 +135,11 @@ public class QuizManager : MonoBehaviour
 
     private void AnimateWin(Button correctButton)
     {
+        if (winSound != null)
+        {
+            audioSource.PlayOneShot(winSound);
+        }
+
         correctButton.image.DOColor(correctColor, 0.3f);
         correctButton.transform.DOScale(1.1f, 0.3f).SetLoops(3, LoopType.Yoyo).OnComplete(() =>
         {
@@ -137,6 +153,11 @@ public class QuizManager : MonoBehaviour
 
     private void AnimateLose(Button wrongButton)
     {
+        if (loseSound != null)
+        {
+            audioSource.PlayOneShot(loseSound);
+        }
+
         wrongButton.image.DOColor(wrongColor, 0.3f);
         wrongButton.GetComponent<RectTransform>().DOShakeAnchorPos(0.5f, new Vector2(15, 0), 10, 90, false, true).OnComplete(() =>
         {

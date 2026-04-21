@@ -101,7 +101,7 @@
     },
     "com.unity.burst": {
       "version": "1.8.28",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
@@ -312,10 +312,11 @@
       "url": "https://packages.unity.com"
     },
     "media.lightside.unitext": {
-      "version": "file:C:/Users/mohab/Desktop/UniText-1.0.0",
+      "version": "file:F:/GitHub/StoryOfSaudiArabia/UniText-setup",
       "depth": 0,
       "source": "local",
       "dependencies": {
+        "com.unity.burst": "1.6.0",
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.ui": "1.0.0"
       }

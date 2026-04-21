@@ -16,12 +16,16 @@ MonoBehaviour:
   islandIndex: 2
   mapPrefab: {fileID: 5237604193872951547, guid: 195a49212da8fe146a3f5bc391086049, type: 3}
   questionData:
-    questionText: 
+    questionText: "\u0645\u0646 \u0623\u0634\u0647\u0631 \u062D\u0643\u0627\u0645
+      \u0627\u0644\u062F\u0648\u0644\u0629 \u0627\u0644\u0633\u0639\u0648\u062F\u064A\u0629
+      \u0627\u0644\u062B\u0627\u0646\u064A\u0629 \u0628\u0639\u062F \u0627\u0644\u0645\u0624\u0633\u0633\u061F"
     options:
-    - 
-    - 
-    - 
-    - 
-    correctAnswerIndex: 0
-    hintText: 
+    - "\u0645\u062D\u0645\u062F \u0628\u0646 \u0639\u0628\u062F \u0627\u0644\u0648\u0647\u0627\u0628"
+    - " \u0627\u0644\u0625\u0645\u0627\u0645 \u0641\u064A\u0635\u0644 \u0628\u0646
+      \u062A\u0631\u0643\u064A"
+    - "\u0627\u0644\u0625\u0645\u0627\u0645 \u062A\u0631\u0643\u064A \u0628\u0646
+      \u0639\u0628\u062F\u0627\u0644\u0644\u0647"
+    - "\u0645\u062D\u0645\u062F \u0628\u0646 \u0633\u0639\u0648\u062F"
+    correctAnswerIndex: 1
+    hintText: "\u0627\u0633\u0645\u0647 \u0641\u064A\u0635\u0644"
     hintCost: 10

@@ -147,3 +147,4 @@ MonoBehaviour:
   hoverHeight: 0.5
   hoverDuration: 1
   shrinkDuration: 0.3
+  collectSound: {fileID: 8300000, guid: 70f7622bf71d64048a5e7e6f9957b147, type: 3}

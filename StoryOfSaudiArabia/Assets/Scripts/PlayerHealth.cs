@@ -3,10 +3,8 @@ using DG.Tweening.Core.Easing;
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D), typeof(Animator))]
 public class PlayerHealth : MonoBehaviour
 {
-
     public event Action<int> OnHealthChanged;
 
     [Header("Health Settings")]
@@ -22,6 +20,11 @@ public class PlayerHealth : MonoBehaviour
     public float fallDeathYThreshold = -10f;
     public float deathBounceForce = 12f;
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip deathSound;
+    private AudioSource audioSource;
+
     private Rigidbody2D rb;
     private Collider2D col;
     private Animator anim;
@@ -34,6 +37,8 @@ public class PlayerHealth : MonoBehaviour
         col = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+
+        audioSource = GetComponent<AudioSource>();
 
         OnHealthChanged?.Invoke(currentHealth);
     }
@@ -60,6 +65,11 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
+            if (hitSound != null)
+            {
+                audioSource.PlayOneShot(hitSound);
+            }
+
             StartInvincibility();
         }
     }
@@ -84,6 +94,11 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
+
+        if (deathSound != null)
+        {
+            audioSource.PlayOneShot(deathSound);
+        }
 
         DOTween.Kill(this);
         sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);

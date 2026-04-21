@@ -15,6 +15,9 @@ public class Collectible : MonoBehaviour
     [SerializeField] private float hoverDuration = 1f;
     [SerializeField] private float shrinkDuration = 0.3f;
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip collectSound;
+
     private bool isCollected = false;
     private Tween hoverTween;
     private Collider2D col;
@@ -43,6 +46,12 @@ public class Collectible : MonoBehaviour
     private void AnimateCollection()
     {
         if (col != null) col.enabled = false;
+
+
+        if (collectSound != null)
+        {
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
+        }
 
         hoverTween.Kill();
 

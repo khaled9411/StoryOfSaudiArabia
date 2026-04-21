@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip jumpSound;
+    private AudioSource audioSource;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -30,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         jumpsRemaining = maxJumps;
     }
 
@@ -106,8 +111,13 @@ public class PlayerController : MonoBehaviour
         if (jumpsRemaining > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-
             animator.SetTrigger(jumpingHash);
+
+            if (jumpSound != null)
+            {
+                audioSource.PlayOneShot(jumpSound);
+            }
+
             jumpsRemaining--;
         }
     }

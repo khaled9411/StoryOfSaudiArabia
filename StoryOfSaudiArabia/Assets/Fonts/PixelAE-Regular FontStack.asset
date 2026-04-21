@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ecf69df938478886267ac0693c4369, type: 3}
   m_Name: PixelAE-Regular FontStack
   m_EditorClassIdentifier: LightSide.UniText::LightSide.UniTextFontStack
-  fonts:
-    items:
-    - {fileID: 11400000, guid: 5668ed542a379f24db31e0f2b7d174da, type: 2}
+  families:
+  - primary: {fileID: 11400000, guid: 5668ed542a379f24db31e0f2b7d174da, type: 2}
+    faces: []
   fallbackStack: {fileID: 0}

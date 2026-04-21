@@ -16,12 +16,15 @@ MonoBehaviour:
   islandIndex: 2
   mapPrefab: {fileID: 8405907734705989069, guid: 789512df40ab66941807877d22c2f4d0, type: 3}
   questionData:
-    questionText: 
+    questionText: "\u0641\u064A \u0623\u064A \u0645\u0639\u0631\u0643\u0629 \u0633\u0642\u0637\u062A
+      \u0627\u0644\u062F\u0648\u0644\u0629 \u0627\u0644\u0633\u0639\u0648\u062F\u064A\u0629
+      \u0627\u0644\u062B\u0627\u0646\u064A\u0629\u061F"
     options:
-    - 
-    - 
-    - 
-    - 
-    correctAnswerIndex: 0
-    hintText: 
+    - "\u0645\u0639\u0631\u0643\u0629 \u062A\u0631\u0628\u0629"
+    - "\u0645\u0639\u0631\u0643\u0629 \u0627\u0644\u0645\u0644\u064A\u062F\u0627\u0621"
+    - "\u0645\u0639\u0631\u0643\u0629 \u0643\u0646\u0632\u0627\u0646"
+    - "\u0645\u0639\u0631\u0643\u0629 \u062C\u0631\u0627\u0628"
+    correctAnswerIndex: 1
+    hintText: "\u0627\u0633\u0645\u0647\u0627 \u064A\u0628\u062F\u0623 \u0628\u0640
+      (\u0627\u0644\u0645\u2026)"
     hintCost: 10
